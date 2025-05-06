@@ -14,7 +14,7 @@ else:
 
 st.title("my gen AI app")
 repo_id = "microsoft/Phi-3-mini-4k-instruct"
-temp = 1
+temp = 0
 print(repo_id, temp)
 logger.info(f"{temp=}")
 
