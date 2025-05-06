@@ -21,6 +21,7 @@ repo_id = "microsoft/Phi-3-mini-4k-instruct"
 with st.form("sample_app"):
     txt = st.text_area("Enter text:", "what GPT stands for?")
     temp = st.slider("change temperature", min_value=0.0, max_value=2.0, value=1.0, step=0.1)
+    logger.info(f"{temp=}")
     sub = st.form_submit_button("submit")
     if sub:
         llm = HuggingFaceEndpoint(
