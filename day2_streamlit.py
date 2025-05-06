@@ -14,12 +14,13 @@ else:
 
 st.title("my gen AI app")
 repo_id = "microsoft/Phi-3-mini-4k-instruct"
-temp = 0
-print(repo_id, temp)
-logger.info(f"{temp=}")
+# temp = 0
+# print(repo_id, temp)
+# logger.info(f"{temp=}")
 
 with st.form("sample_app"):
     txt = st.text_area("Enter text:", "what GPT stands for?")
+    temp = st.slider("change temperature", min_value=0.0, max_value=2.0, value=1.0, step=0.1)
     sub = st.form_submit_button("submit")
     if sub:
         llm = HuggingFaceEndpoint(
